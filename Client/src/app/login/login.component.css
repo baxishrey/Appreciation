@@ -1,0 +1,9 @@
+.container {
+    background-color: lightgray;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.form-control {
+    width: 50%;
+}
