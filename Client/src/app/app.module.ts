@@ -9,12 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { routing } from "app/app.routing";
 import { AuthService } from "app/_services/auth.service";
 import { AuthGuard } from "app/_guards";
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
