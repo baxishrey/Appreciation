@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using Appreciation.Server.DTOs;
 using System.Diagnostics;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -7,14 +7,14 @@ using System.Diagnostics;
 namespace Appreciation.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class HomeController : Controller
+    public class AppreciateController : Controller
     {
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "Shrey", "Manish", "Rahul", "Nikhil", "Vineet" };
-        }
+        //// GET: api/values
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
         //// GET api/values/5
         //[HttpGet("{id}")]
@@ -23,11 +23,12 @@ namespace Appreciation.Server.Controllers
         //    return "value";
         //}
 
-        //// POST api/values
+        // POST api/values
         [HttpPost]
-        public void Post(string targetUser, string message)
+        public ActionResult Post(AppreciateDto appreciation)
         {
-            Debug.WriteLine("{0} was sent the message\n{1}", targetUser, message);
+            Debug.WriteLine("{0} was sent the message\n{1}", appreciation.TargetUser, appreciation.Message);
+            return Ok(appreciation);
         }
 
         //// PUT api/values/5

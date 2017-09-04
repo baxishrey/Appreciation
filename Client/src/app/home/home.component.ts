@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   userList:string[] = [];
   selectedUser:string;
+  message: string;
+
   constructor(
     private userService: UserService,
     private appreciateService: AppreciateService) {
@@ -23,7 +25,8 @@ export class HomeComponent implements OnInit {
   }
 
   appreciate() {
-    console.log(this.selectedUser);
-    this.appreciateService.sendMail();
+    //console.log(this.selectedUser);
+    //console.log(this.message);
+    this.appreciateService.sendMail(this.selectedUser, this.message);
   }
 }
