@@ -1,3 +1,23 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <h2>Appreciate someone</h2>
+  <form name="appreciateForm" (ngSubmit)="appreciate()" #f="ngForm" novalidate>
+    <div class="form-group">
+      <label for="userName">Whom do you want to appreciate?</label>
+      <!-- <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required> -->
+      <select class="form-control" [(ngModel)] = "selectedUser" name="selectUser">
+        <option [selected] = "!selectedUser" disabled [hidden] = "!selectedUser">Choose a name</option>
+        <option *ngFor="let user of userList" [value] = "user">
+          {{user}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="password">Message</label>
+      <!-- <input type="textarea" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required> -->
+      <textarea rows="10" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success btn-login">Appreciate</button>
+    </div>
+  </form>
+</div>

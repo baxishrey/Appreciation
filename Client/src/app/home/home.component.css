@@ -1,0 +1,14 @@
+.container {
+    box-shadow: 0 0 0 1px #e5e5e5;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding: 15px;
+    max-width: 960px;
+    width: 50%;
+    margin: 100px auto ;    
+}
+
+.form-control {
+    display: block;
+    width: 100%;    
+}

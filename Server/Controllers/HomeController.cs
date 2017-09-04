@@ -12,7 +12,7 @@ namespace Appreciation.Server.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "Hello", "World" };
+            return new string[] { "Shrey", "Manish", "Rahul", "Nikhil", "Vineet" };
         }
 
         //// GET api/values/5

@@ -10,6 +10,8 @@ import { routing } from "app/app.routing";
 import { AuthService } from "app/_services/auth.service";
 import { AuthGuard } from "app/_guards";
 import { NavbarComponent } from './navbar/navbar.component';
+import { UserService } from "app/_services/user.service";
+import { AppreciateService } from './_services/appreciate.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   providers: [
     AuthService,
-    AuthGuard
+    UserService,
+    AuthGuard,
+    AppreciateService
   ],
   bootstrap: [AppComponent]
 })
